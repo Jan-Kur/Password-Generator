@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+:root {
+    --main-background-color: #ECFDF5;
+    --theme-switch-bg-color: #dde7e1;
+    --theme-switch-color: #f59e0b;
+    --default-title-color: #111827;
+    --good-color: #10B981;
+    --bad-color: rgb(230, 0, 0);
+    --description-text-color: #6B7280;
+    --password-bg-color: #273549;
+    --button-text-color: white;
+    --divider-color: #D5D4D8;
+    --password-text-color: #5DEF92;
+}
+
+.darkmode {
+    --main-background-color: #121d2e;
+    --theme-switch-bg-color: #163158;
+    --theme-switch-color: #054faa;
+    --default-title-color: white;
+    --good-color: #10B981;
+    --bad-color: rgb(230, 0, 0);
+    --description-text-color: #D5D4D8;
+    --password-bg-color: #273549;
+    --button-text-color: white;
+    --divider-color: #2F3E53;
+    --password-text-color: #5DEF92;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+html {
+    font-family: Karla;
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--main-background-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 20%;
+    margin-right: 20%;
+    gap: 15px;
+}
+
+.title {
+    font-weight: 800;
+    font-size: 60px;
+    line-height: 60px;
+    color: var(--default-title-color);
+    text-align: center;
+}
+
+.title .secure {
+    color: var(--good-color);
+}
+
+.title .hacked {
+    color: var(--bad-color);
+}
+
+.description {
+    color: var(--description-text-color);
+    font-size: 24px;
+    line-height: 33.6px;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    width: fit-content;
+    
+}
+
+.generate {
+    width: Hug (191px)px;
+    height: Hug (42px)px;
+    top: 284px;
+    left: 52px;
+    padding: 9px 17px 9px 15px;
+    gap: 12px;
+    border-radius: 10px;
+    opacity: 0px;
+    background-color: var(--good-color);
+    color: #FFFFFF;
+    font-size: 24px;
+    align-self: center;
+    font-weight: 600;
+}
+
+.generate:hover {
+    background-color: #01a375;
+}
+
+.divider {
+    border: 1px solid;
+    color: var(--divider-color);
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.passwords-container {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height: auto;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.container-for-password1, .container-for-password2 {
+    background-color: var(--password-bg-color);
+    color: var(--password-text-color);
+    border-radius: 6px;
+    padding: 3px 17px;
+    flex: 1 1 auto;
+    min-width: 100px;
+    max-width: 37%;
+    min-height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.password1, .password2 {
+    line-height: 40px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 24px;
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    white-space: nowrap;
+}
+
+
+#theme-switch {
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    border-radius: 50%;
+    background-color: var(--theme-switch-bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 20px;
+    right: 20px;
+    position: fixed;
+}
+
+#theme-switch svg {
+    fill: var(--theme-switch-color);
+}
+
+#theme-switch svg:first-child {
+    display: none;
+}
+
+.darkmode #theme-switch svg:first-child {
+    display: block;
+}
+
+.darkmode #theme-switch svg:last-child {
+    display: none; 
+}
+
+.copy-button {
+    background-color: var(--password-bg-color);
+    color: #22c55e;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+}
+
+.copy-button:hover {
+    box-shadow: 0 0 10px 2px var(--password-text-color);
+}
+
+.modes {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 40px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+#Noob, #Hacker, #Pro {
+    font-size: 24px;
+    padding: 5px 15px 5px 15px;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+#Noob {
+    background-color: rgb(27, 208, 94);
+}
+
+#Noob:hover {
+    background-color: rgb(22, 181, 80);
+}
+
+#Pro {
+    background-color: rgb(240, 123, 6);
+}
+
+#Pro:hover {
+    background-color: rgb(221, 89, 2);
+}
+
+#Hacker {
+    background-color: rgb(236, 15, 15);
+}
+
+#Hacker:hover {
+    background-color: rgb(208, 0, 0);
+}
+
+#currentMode {
+    font-size: 24px;
+    font-weight: 700;
+    width: 100%;
+    text-align: center;
+    color: var(--default-title-color);
+}
+
+#noobName {
+    color: rgb(27, 208, 94);
+}
+
+#proName {
+    color: rgb(240, 123, 6);
+}
+
+#hackerName {
+    color: rgb(236, 15, 15);
+}
